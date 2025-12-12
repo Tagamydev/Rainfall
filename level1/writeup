@@ -1,0 +1,11 @@
+we first decompile the code in c
+
+we can see that we can get an segmentation fault with the 76 digits in the input
+also we can see the program have an function named run that exectutes a shell but it is not accessible from main like the level before
+
+so we will need to use the buffer overflow to call that function
+
+to do so first we need no know the address of that function, the offset in this case is easy 76 and yeah that is all
+
+
+first we get the adress running the program trough gdb and extracting the value with info functions
