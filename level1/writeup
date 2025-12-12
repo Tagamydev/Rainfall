@@ -20,3 +20,8 @@ python -c 'print "a" * 76 + "\x08\x04\x84\x44"[::-1]' > payload
 and then we execute the payload with pipes to exploit the binnary
 
 
+
+why we can replace the adress, first we need to understand the concept of the return, when the return is called the stack is being used to change,
+in this case the offset match with the offset of the string, but is not allways the case, so we will need to make sure how the edp is being called
+
+we need to calculate the offset
